@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>Sunatillo Pulotov Personal Portfolio</title>
+    <title>Blog - Tunis Personal Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
@@ -24,13 +23,12 @@
     <!-- Modernizr JS File -->
     <script src="/tunis/dark/js/modernizr.custom.js"></script>
 </head>
-
-<body class="home">
+<body class="blog-post">
 <!-- Header Starts -->
 <header class="header" id="navbar-collapse-toggle">
     <!-- Fixed Navigation Starts -->
     <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
-        <li class="icon-box active">
+        <li class="icon-box">
             <i class="fa fa-home"></i>
             <a href="/">
                 <h2>Home</h2>
@@ -54,10 +52,10 @@
                 <h2>Contact</h2>
             </a>
         </li>
-        <li class="icon-box">
+        <li class="icon-box active">
             <i class="fa fa-comments"></i>
             <a href="/blogs">
-                <h2>/blogs</h2>
+                <h2>Blog</h2>
             </a>
         </li>
     </ul>
@@ -70,37 +68,48 @@
             <span></span>
             <span></span>
             <ul class="list-unstyled" id="menu">
-                <li class="active"><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="about"><i class="fa fa-user"></i><span>About</span></a></li>
                 <li><a href="portfolio"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
                 <li><a href="contact"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="/blogs"><i class="fa fa-comments"></i><span>/blogs</span></a></li>
+                <li class="active"><a href="blog"><i class="fa fa-comments"></i><span>Blog</span></a></li>
             </ul>
         </div>
     </nav>
     <!-- Mobile Menu Ends -->
 </header>
 <!-- Header Ends -->
+<!-- Page Title Starts -->
+<section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+    <h1>my <span>blog</span></h1>
+    <span class="title-bg">posts</span>
+</section>
+<!-- Page Title Ends -->
 <!-- Main Content Starts -->
-<section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
-    <div class="color-block d-none d-lg-block"></div>
-    <div class="row home-details-container align-items-center">
-        <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
-        <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
-            <div>
-                <img src="/tunis/dark/img/profile2.png" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                <h1 class="text-uppercase poppins-font">I'm Sunatillo Pulotov.<span>Web developer</span></h1>
-                <p class="open-sans-font">I am a apprentice Full stack developer for MYITEDU, I am 22 years old based from New York City, Queens.</p>
-                <a class="button" href="about">
-                    <span class="button-text">more about me</span>
-                    <span class="button-icon fa fa-arrow-right"></span>
-                </a>
-            </div>
+<section class="main-content revealator-slideup revealator-once revealator-delay1">
+    <div class="container">
+        <div class="row">
+            <!-- Article Starts -->
+            <article class="col-12">
+                <!-- Meta Starts -->
+                <div class="meta open-sans-font">
+                    <span><i class="fa fa-user"></i> Sunatillo</span>
+                    <span class="date"><i class="fa fa-calendar"></i>{{$blog->created_at}}</span>
+                    <span><i class="fa fa-tags"></i> wordpress, business, economy, design</span>
+                </div>
+                <!-- Meta Ends -->
+                <!-- Article Content Starts -->
+                <h1 class="text-uppercase text-capitalize">{{$blog->title}}</h1>
+                <img src="{{$blog->image}}" class="img-fluid" alt="Blog image"/>
+                <div class="blog-excerpt open-sans-font pb-5">
+                    <p>{{$blog->description}}</p>
+                </div>
+                <!-- Article Content Ends -->
+            </article>
+            <!-- Article Ends -->
         </div>
     </div>
 </section>
-<!-- Main Content Ends -->
-
 <!-- Template JS Files -->
 <script src="/tunis/dark/js/jquery-3.5.0.min.js"></script>
 <script src="/tunis/dark/js/preloader.min.js"></script>
@@ -115,5 +124,4 @@
 <script src="/tunis/dark/js/custom.js"></script>
 
 </body>
-
 </html>
