@@ -20,7 +20,6 @@ class PublicController extends Controller
         return view("portfolio",compact('portfolios'));
     }
     public function about(Request $request){
-        $about = About::all();
         return view("about");
     }
     public function blog(Request $request,$id){
@@ -28,8 +27,7 @@ class PublicController extends Controller
         return view("blog",compact('blog'));
     }
     public function contact(Request $request){
-        $contacts = Contact::all();
-        return view("contact",compact('contacts'));
+        return view("contact");
     }
     public function blogs(Request $request){
         $blogs = Blog::all();
